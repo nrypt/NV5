@@ -1,0 +1,41 @@
+.nv5-toolbar-dropdown-wrap {
+  background-color: inherit;
+}
+.nv5-toolbar-dropdown-wrap:after {
+  content: "â–¼";
+  color: inherit;
+  position: absolute;
+  margin-left: -10px;
+  z-index: 1;
+  text-align: center;
+  pointer-events: none;
+}
+
+.nv5-toolbar-dropdown {
+  min-width: 75px;
+  /* max-width: 150px; */
+  /*margin-right: 15px;*/
+  padding-right: 15px;
+  padding-left: 15px;
+  direction: rtl;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: inherit;
+  background-color: inherit !important;
+  border: 0 !important;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.nv5-toolbar-dropdown select {
+  -webkit-appearance:none; outline:none;
+}
+
+.nv5-toolbar-dropdown option {
+  background-color: inherit;
+  color: inherit;
+}

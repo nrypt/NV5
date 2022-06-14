@@ -30,7 +30,7 @@ at the bottom of the HTML, add the library
 ```
 
 next, for each element (i.e. chart) call the ```NV5.Add(<type>, <id>, <options>)``` method wrapped in a function assigned to ```window.NV5_ready```.
-The ```Add``` method expects an ```url``` to a JSON endpoint and a ```method``` to fetch the data.
+Options in the ```Add``` method expect an ```url``` to a JSON endpoint and a ```method``` to fetch the data.
 
 ```HTML
 <script>

@@ -54,7 +54,7 @@ Sample chart:
 ### Extra parametrization
 
 ```javascript
- NV5.Add('line', 'line-sales-sire', {
+ NV5.Add('line', 'line-example', {
     url: window.NV5SDKURL + "/api/.../${user}/...",
     method: 'GET',
     headers: {}, // pass headers to the request

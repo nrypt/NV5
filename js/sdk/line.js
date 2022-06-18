@@ -1,7 +1,7 @@
 class Line extends Widget {
   draw(data) {
     this._chart = LineChart.getChart(data, {
-      x: d => d['date'],
+      x: d => new Date(d['date']),
       y: d => d['close'],
       width: this._width,
       height: this._height,

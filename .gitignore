@@ -6,3 +6,4 @@ dist
 .cache
 .editorconfig
 .idea
+img/.DS_Store

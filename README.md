@@ -81,8 +81,30 @@ Sample chart:
 
 Currently, this project is the process of migrating the visualizations to [D3js](https://d3js.org). As of now online the following graphs are available:
 
-* Histogram
-* Line
+### Histogram
+### Line
+Options available for Line:
+* define x axis key, label and date type
+* define y axis key and label
+
+```javascript
+NV5.Add('line', 'test-line', {
+  url: window.NV5SDKURL + "/api/line_object_array.json",
+  method: 'GET'
+}, {
+  xAxis: {
+    key: 'date',
+    date: true,
+    label: 'Date',
+  },
+  yAxis: {
+    key: 'close',
+    label: 'Daily close',
+  }
+});
+```
+
+X axis defaults to key **date** and Date() type and Y axis defaults to key **value** and an empty label.
 
 ## Next steps
 

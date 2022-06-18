@@ -37,6 +37,16 @@
       NV5.Add('line', 'test-line', {
         url: window.NV5SDKURL + "/api/line_object_array.json",
         method: 'GET'
+      }, {
+        xAxis: {
+          key: 'date',
+          date: true,
+          label: 'Date',
+        },
+        yAxis: {
+          key: 'close',
+          label: 'Daily close',
+        }
       });
     }
   </script>

@@ -20,7 +20,7 @@ class Line extends Widget {
       let dt = result.data;
       this._applyOptions();
       this.draw(dt);
-      if (result.details !== undefined && result.details.message !== undefined) {
+      if (result.details?.message !== undefined) {
         this.appendInformation(result.details.message);
       }
       this.endDataRender();
@@ -28,12 +28,12 @@ class Line extends Widget {
   }
 
   _applyOptions () {
-    let xKey = (this._options.xAxis !== undefined) ? this._options.xAxis.key : 'date';
-    let xIsDate = ((this._options.xAxis !== undefined && this._options.xAxis.date) || this._options.xAxis === undefined);
-    let yKey = (this._options.yAxis !== undefined) ? this._options.yAxis.key : 'value';
+    let xKey = this._options?.xAxis?.key ?? 'date';
+    let yKey = this._options?.yAxis?.key ?? 'value';
+    let isDate = this._options?.xAxis?.date ?? false
 
-    this._yLabel = (this._options.yAxis !== undefined) ? this._options.yAxis.label : '';
-    this._fnx = d => (xIsDate) ? new Date(d[xKey]) : d[xKey]
+    this._yLabel = this._options?.yAxis?.label ?? '';
+    this._fnx = d => (typeof isDate === 'boolean' && isDate) ? new Date(d[xKey]) : d[xKey]
     this._fny = d => d[yKey]
   }
 

@@ -13,7 +13,7 @@ class Histogram extends Widget {
     NV5Common.makeRequest(this._endpointObject).then(result => {
       let dt = this._transformLabels(result.data);
       this.draw(dt);
-      if (result.details !== undefined && result.details.message !== undefined) {
+      if (result.details?.message !== undefined) {
         this.appendInformation(result.details.message);
       }
       this.endDataRender();
